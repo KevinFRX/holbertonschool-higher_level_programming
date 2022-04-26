@@ -9,7 +9,7 @@ if number < 0 and abs(number) % 10 != 0:
 
 print(abs(number) % 10, "and is", end=' ')
 
-if number < 0 and abs(number) % 10 != 0 or abs(number) % 10 < 6:
+if abs(number) % 10 != 0 and (number < 0 or abs(number) % 10 < 6):
     print("less than 6 and not 0")
 elif int(repr(number)[-1]) > 5:
     print("greater than 5")
