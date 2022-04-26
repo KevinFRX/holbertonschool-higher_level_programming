@@ -19,7 +19,7 @@ listint_t *insert_node(listint_t **head, int number)
 	node->n = number;
 	aux = *head;
 
-	if (!head || !*head || aux->n > number)
+	if (!head || !*head)
 	{
 		node->next = NULL;
 		*head = node;
@@ -27,6 +27,12 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 	while (aux->next && number > aux->next->n)
 		aux = aux->next;
+	if (number < node->n)
+	{
+		node->next = *head;
+		*head = node;
+		return (*head);
+	}
 	node->next = aux->next;
 	aux->next = node;
 	return (node);
