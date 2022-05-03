@@ -10,6 +10,6 @@
 int is_palindrome(listint_t **head)
 {
 	if (!(*head) || !(head))
-		return (0);
-	return (1);
+		return (1);
+	return (0);
 }
