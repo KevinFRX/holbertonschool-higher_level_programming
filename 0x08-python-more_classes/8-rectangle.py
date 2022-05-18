@@ -6,6 +6,7 @@ class Rectangle:
     """Defining rectangle"""
     number_of_instances = 0
     print_symbol = '#'
+
     def __init__(self, width=0, height=0):
         """Initialization"""
         self.width = width
@@ -53,7 +54,8 @@ class Rectangle:
     def __str__(self):
         if self.width == 0 or self.height == 0:
             return ''
-        return ((str(self.print_symbol) * self.width + '\n') * (self.height - 1) + str(self.print_symbol) * self.width)
+        aux = (str(self.print_symbol) * self.width + '\n')
+        return ((aux * self.height)[:-1])
 
     def __repr__(self):
         if self.width == 0 or self.height == 0:
