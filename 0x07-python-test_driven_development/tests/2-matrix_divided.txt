@@ -1,0 +1,51 @@
+The ``2-matrix_divided`` module
+===============================
+
+Using ``matrix_divided``
+------------------------
+
+Import the function:
+
+	>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Now use it:
+
+	>>> matrix_divided([["XD", 1], [2, 3]], 2)
+	Traceback (most recent call last):
+		...
+    	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>>> matrix_divided(None, 2)
+        Traceback (most recent call last):
+        	...
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>>> matrix_divided([["XD", 1], [2, 3, 4]], 2)
+        Traceback (most recent call last):
+        	...
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>>> matrix_divided([[None, 1], [2, 3]], 2)
+        Traceback (most recent call last):
+        	...
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>>> matrix_divided([1, 2, 3, 4], 2)
+        Traceback (most recent call last):
+        	...
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>>> matrix_divided([[0, 1], [2, 3]], "XD")
+        Traceback (most recent call last):
+		...
+        TypeError: div must be a number
+
+	>>> matrix_divided([[0, 1], [2, 3]], 0)
+        Traceback (most recent call last):
+		...
+        ZeroDivisionError: division by zero
+
+	>>> matrix_divided([[0, 1], [2, 3, 4]], 2)
+        Traceback (most recent call last):
+                ...
+        TypeError: Each row of the matrix must have the same size
