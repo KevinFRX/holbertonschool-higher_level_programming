@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Adds 2 integers"""
+"""Module to add 2 integers"""
 
 
 def add_integer(a, b=98):
     """
-    Returns the addition of two numbers
-    or a TypeError
+    Function that returns the addition of two numbers
+    or a TypeError if they are not numbers
     """
     if not isinstance(a, int) and not isinstance(a, float):
         raise TypeError("a must be an integer")

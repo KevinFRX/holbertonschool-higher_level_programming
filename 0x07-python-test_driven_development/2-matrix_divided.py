@@ -1,10 +1,15 @@
 #!/usr/bin/python3
-"""Divides all elements of a matrix"""
+"""Module to divide all elements of a matrix"""
 
 
 def matrix_divided(matrix, div):
-    """Returns a new matrix divided by div"""
-
+    """
+    Funtion that returns a new matrix divided by div,
+    a TypeError if matrix is not a matrix of integers/floats,
+    a TypeError if the rows of the matrix do not have the same size
+    a TypeError if div is not a number
+    or a ZeroDivisionError if div is 0
+    """
     if not isinstance(matrix, list):
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats")
