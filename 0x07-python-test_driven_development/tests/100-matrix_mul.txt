@@ -1,0 +1,66 @@
+The ``100-matrix_mul`` module
+=============================
+
+Using ``matrix_mul``
+--------------------
+
+Import the function:
+
+	>>> matrix_mul = __import__("100-matrix_mul").matrix_mul
+
+Now use it:
+
+	>>> matrix_mul("a", [])
+	Traceback (most recent call last):
+		...
+    	TypeError: m_a must be a list
+
+	>>> matrix_mul([], "a")
+        Traceback (most recent call last):
+                ...
+        TypeError: m_b must be a list
+
+	>>> matrix_mul([], [])
+        Traceback (most recent call last):
+                ...
+        TypeError: m_a can't be empty
+
+	>>> matrix_mul([[]], [])
+        Traceback (most recent call last):
+                ...
+        TypeError: m_b can't be empty
+
+	>>> matrix_mul(["a"], [])
+        Traceback (most recent call last):
+                ...
+        TypeError: m_a must be a list of lists
+
+	>>> matrix_mul([[]], ["a"])
+        Traceback (most recent call last):
+                ...
+        TypeError: m_b must be a list of lists
+
+	>>> matrix_mul([["a"]], [[]])
+        Traceback (most recent call last):
+                ...
+        TypeError: m_a should contain only integers or floats
+
+	>>> matrix_mul([[1]], [["a"]])
+        Traceback (most recent call last):
+                ...
+        TypeError: m_b should contain only integers or floats
+
+	>>> matrix_mul([[1], [2, 3]])
+        Traceback (most recent call last):
+                ...
+        TypeError: each row of m_a must be of the same size
+
+	>>> matrix_mul([[1]], [[1], [2, 3]])
+        Traceback (most recent call last):
+                ...
+        TypeError: each row of m_b must be of the same size
+
+	>>> matrix_mul([[1]], [[1, 2], [3, 4]])
+        Traceback (most recent call last):
+                ...
+        TypeError: m_a and m_b can't be multiplied
