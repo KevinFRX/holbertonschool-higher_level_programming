@@ -23,24 +23,24 @@ Now use it:
 	>>> matrix_mul([], [])
         Traceback (most recent call last):
                 ...
-        TypeError: m_a can't be empty
+        ValueError: m_a can't be empty
 
-	>>> matrix_mul([[]], [])
+	>>> matrix_mul([[1]], [])
         Traceback (most recent call last):
                 ...
-        TypeError: m_b can't be empty
+        ValueError: m_b can't be empty
 
 	>>> matrix_mul(["a"], [])
         Traceback (most recent call last):
                 ...
         TypeError: m_a must be a list of lists
 
-	>>> matrix_mul([[]], ["a"])
+	>>> matrix_mul([[1]], ["a"])
         Traceback (most recent call last):
                 ...
         TypeError: m_b must be a list of lists
 
-	>>> matrix_mul([["a"]], [[]])
+	>>> matrix_mul([["a"]], [[1]])
         Traceback (most recent call last):
                 ...
         TypeError: m_a should contain only integers or floats
@@ -50,7 +50,7 @@ Now use it:
                 ...
         TypeError: m_b should contain only integers or floats
 
-	>>> matrix_mul([[1], [2, 3]])
+	>>> matrix_mul([[1], [2, 3]], [[1]])
         Traceback (most recent call last):
                 ...
         TypeError: each row of m_a must be of the same size
@@ -63,4 +63,4 @@ Now use it:
 	>>> matrix_mul([[1]], [[1, 2], [3, 4]])
         Traceback (most recent call last):
                 ...
-        TypeError: m_a and m_b can't be multiplied
+        ValueError: m_a and m_b can't be multiplied

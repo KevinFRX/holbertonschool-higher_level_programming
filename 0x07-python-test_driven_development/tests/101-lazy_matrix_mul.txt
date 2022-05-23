@@ -1,0 +1,64 @@
+The ``101-lazy_matrix_mul`` module
+=============================
+
+Using ``lazy_matrix_mul``
+--------------------
+
+Import the function:
+
+	>>> lazy_matrix_mul = __import__("101-lazy_matrix_mul").lazy_matrix_mul
+
+Now use it:
+
+	>>> lazy_matrix_mul("a", [])
+	Traceback (most recent call last):
+		...
+  	ValueError: Scalar operands are not allowed, use '*' instead
+
+	>>> lazy_matrix_mul([], "a")
+        Traceback (most recent call last):
+                ...
+        ValueError: Scalar operands are not allowed, use '*' instead
+
+	>>> lazy_matrix_mul([], [])
+        0.0
+
+	>>> lazy_matrix_mul([[1]], [])
+        Traceback (most recent call last):
+                ...
+        ValueError: shapes (1,1) and (0,) not aligned: 1 (dim 1) != 0 (dim 0)
+
+	>>> lazy_matrix_mul(["a"], [])
+        Traceback (most recent call last):
+                ...
+        ValueError: shapes (1,) and (0,) not aligned: 1 (dim 0) != 0 (dim 0)
+
+	>>> lazy_matrix_mul([[1]], ["a"])
+        Traceback (most recent call last):
+                ...
+        TypeError: invalid data type for einsum
+
+	>>> lazy_matrix_mul([["a"]], [[1]])
+        Traceback (most recent call last):
+                ...
+        TypeError: invalid data type for einsum
+
+	>>> lazy_matrix_mul([[1]], [["a"]])
+        Traceback (most recent call last):
+                ...
+        TypeError: invalid data type for einsum
+
+	>>> lazy_matrix_mul([[1], [2, 3]], [[1]])
+        Traceback (most recent call last):
+                ...
+        ValueError: setting an array element with a sequence.
+
+	>>> lazy_matrix_mul([[1]], [[1], [2, 3]])
+        Traceback (most recent call last):
+                ...
+        ValueError: setting an array element with a sequence.
+
+	>>> lazy_matrix_mul([[1]], [[1, 2], [3, 4]])
+        Traceback (most recent call last):
+                ...
+        ValueError: shapes (1,1) and (2,2) not aligned: 1 (dim 1) != 2 (dim 0)
