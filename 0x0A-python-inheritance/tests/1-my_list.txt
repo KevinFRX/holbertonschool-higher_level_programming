@@ -16,6 +16,9 @@ NORMAL
 
 	>>> my_list = MyList([3, 2, 1])
 
+	>>> my_list
+	[3, 2, 1]
+
 	>>> my_list.print_sorted()
 	[1, 2, 3]
 
