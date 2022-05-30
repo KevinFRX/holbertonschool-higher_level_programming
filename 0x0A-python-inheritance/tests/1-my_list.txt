@@ -49,6 +49,8 @@ STRING
 
 ERROR
 
+	>>> my_list = MyList(['A'])
+
 	>>> my_list.print_sorted()
         Traceback (most recent call last):
 	...
