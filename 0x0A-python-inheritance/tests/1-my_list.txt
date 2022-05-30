@@ -14,10 +14,7 @@ Use:
 
 NORMAL
 
-	>>> my_list = MyList([3, 2, 1])
-
-	>>> my_list
-	[3, 2, 1]
+	>>> my_list = MyList([3, 2, 1)
 
 	>>> my_list.print_sorted()
 	[1, 2, 3]
@@ -25,9 +22,6 @@ NORMAL
 EMPTY AND APPEND
 
 	>>> my_list = MyList()
-
-	>>> my_list
-	[]
 
 	>>> my_list.print_sorted()
 	[]
@@ -40,18 +34,12 @@ EMPTY AND APPEND
 
 	>>> my_list.append(1)
 
-	>>> my_list
-	[4, 3, 2, 1]
-
 	>>> my_list.print_sorted()
 	[1, 2, 3, 4]
 
 STRING
 
 	>>> my_list = MyList("Hola")
-
-	>>> my_list
-	['H', 'o', 'l', 'a']
 
 	>>> my_list.print_sorted()
 	['H', 'a', 'l', 'o']
