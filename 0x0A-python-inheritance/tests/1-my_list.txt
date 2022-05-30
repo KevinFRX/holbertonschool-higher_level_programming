@@ -20,4 +20,4 @@ Use:
 	>>> my_list = MyList("Hola")
 
 	>>> my_list.print_sorted()
-	['H', 'o', 'l', 'a']
+	['H', 'a', 'l', 'o']
