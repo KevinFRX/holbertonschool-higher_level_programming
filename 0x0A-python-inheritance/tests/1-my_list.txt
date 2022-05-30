@@ -12,10 +12,14 @@ Use:
 
 	>>> my_list = MyList()
 
+NORMAL
+
 	>>> my_list = MyList([3, 2, 1])
 
 	>>> my_list.print_sorted()
 	[1, 2, 3]
+
+EMPTY AND APPEND
 
 	>>> my_list = MyList()
 
@@ -33,6 +37,8 @@ Use:
 
 	>>> my_list.print_sorted()
 	[1, 2, 3]
+
+STRING
 
 	>>> my_list = MyList("Hola")
 
