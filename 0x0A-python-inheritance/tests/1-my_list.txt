@@ -49,9 +49,9 @@ STRING
 
 ERROR
 
-	>>> my_list = MyList([2.123, "a", 'a', 1])
+	>>> my_list = MyList([1, "a"])
 
 	>>> my_list.print_sorted()
         Traceback (most recent call last):
 	...
-	TypeError: '<' not supported between instances of 'str' and 'float'
+	TypeError: '<' not supported between instances of 'str' and 'int'
