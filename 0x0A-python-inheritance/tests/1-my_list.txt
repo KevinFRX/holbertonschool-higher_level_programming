@@ -26,6 +26,9 @@ EMPTY AND APPEND
 	>>> my_list
 	[]
 
+	>>> my_list.print_sorted()
+	[]
+
 	>>> my_list.append(4)
 
 	>>> my_list.append(3)
