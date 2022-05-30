@@ -26,6 +26,8 @@ EMPTY AND APPEND
 	>>> my_list
 	[]
 
+	>>> my_list.append(4)
+
 	>>> my_list.append(3)
 
 	>>> my_list.append(2)
@@ -33,14 +35,17 @@ EMPTY AND APPEND
 	>>> my_list.append(1)
 
 	>>> my_list
-	[3, 2, 1]
+	[4, 3, 2, 1]
 
 	>>> my_list.print_sorted()
-	[1, 2, 3]
+	[1, 2, 3, 4]
 
 STRING
 
 	>>> my_list = MyList("Hola")
+
+	>>> my_list
+	['H', 'o', 'l', 'a']
 
 	>>> my_list.print_sorted()
 	['H', 'a', 'l', 'o']
