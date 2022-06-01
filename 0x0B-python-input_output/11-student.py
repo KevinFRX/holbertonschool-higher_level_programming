@@ -20,3 +20,7 @@ class Student:
                             dictry[key] = value
                     return dictry
         return self.__dict__
+
+    def reload_from_json(self, json):
+        for i in json:
+            self.__dict__.update({i: json[i]})
