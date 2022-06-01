@@ -12,13 +12,11 @@ class Student:
 
     def to_json(self, attrs=None):
         if type(attrs) is list:
+            dictry = {}
             for i in attrs:
                 if type(i) is str:
-                    dictry = {}
                     for key, value in self.__dict__.items():
                         if key in attrs:
                             dictry[key] = value
-                else:
-                    return self.__dict__
-            return dictry
+                    return dictry
         return self.__dict__
