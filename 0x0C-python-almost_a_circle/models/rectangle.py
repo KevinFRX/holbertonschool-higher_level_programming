@@ -65,9 +65,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """return the area"""
         return self.__width * self.__height
 
     def display(self):
+        """print using #"""
         if self.__y > 0:
             print('\n' * self.__y, end="")
         if self.__width == 0 or self.__height == 0:
@@ -81,10 +83,12 @@ class Rectangle(Base):
                 print()
 
     def __str__(self):
+        """return print()"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
+        """update"""
         if len(args) > 0:
             self.id = args[0]
             if len(args) > 1:
@@ -109,5 +113,6 @@ class Rectangle(Base):
                     self.y = v
 
     def to_dictionary(self):
+        """to dict"""
         return {'id': self.id, 'width': self.width, 'height': self.height,
                 'x': self.x, 'y': self.y}
