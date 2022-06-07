@@ -3,7 +3,7 @@
 
 
 import json
-
+import os
 
 class Base:
     """First class base"""
@@ -45,3 +45,14 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        if os.path.exists(cls.__name__ + ".json") is True:
+            with open(cls.__name__ + ".json", encoding='utf-8') as f:
+                objs = cls.from_json_string(f.read())
+                ret = []
+                for i in objs:
+                    ret.append(cls.create(**i))
+                return ret
+        return []
