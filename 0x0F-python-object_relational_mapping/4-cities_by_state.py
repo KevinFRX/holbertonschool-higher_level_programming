@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""takes in an argument and displays all values in the states table of
-hbtn_0e_0_usa where name matches the argument"""
+""" lists all cities from the database hbtn_0e_4_usa"""
 
 from sys import argv
 import MySQLdb
@@ -8,9 +7,9 @@ import MySQLdb
 if __name__ == "__main__":
     cur = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                           passwd=argv[2], db=argv[3], charset="utf8").cursor()
-    cur.execute(f"SELECT * FROM states WHERE name LIKE '{argv[4]}' ORDER BY id ASC")
+    cur.execute("SELECT cities.id, cities.name, states.name FROM cities, states
+                WHERE cities.state_id = state.id ORDER BY cities.id")
     query_rows = cur.fetchall()
     for row in query_rows:
-        if row[1] == argv[4]:
-            print(row)
+        print(row)
     cur.close()
