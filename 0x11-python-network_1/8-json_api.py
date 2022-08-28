@@ -16,6 +16,8 @@ if __name__ == "__main__":
     else:
         q = sys.argv[1]
 
+    q = {"q": q}
+
     resp = requests.post(url, q)
 
     try:
