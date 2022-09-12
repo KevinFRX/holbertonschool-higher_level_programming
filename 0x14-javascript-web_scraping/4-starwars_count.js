@@ -20,5 +20,5 @@ axios.get(process.argv[2]).then(function (response) {
   }
   console.log(count);
 }).catch(function (error) {
-  console.log('code: ' + error.response.status);
+  console.log(error);
 });
